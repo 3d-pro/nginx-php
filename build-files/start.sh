@@ -5,5 +5,5 @@ service rsyslog start
 cron
 service ssh start
 service postfix start
-service php5.6-fpm start
+service php7.0-fpm start
 nginx
