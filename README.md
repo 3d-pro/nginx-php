@@ -1,4 +1,4 @@
-# Nginx 1.10 /w PHP 7.0 image of Debian Jessie [![Build Status](https://travis-ci.org/3d-pro/nginx-php.svg?branch=master)](https://travis-ci.org/3d-pro/nginx-php)
+# Nginx 1.10 /w PHP 7.0 image of Debian Sid [![Build Status](https://travis-ci.org/3d-pro/nginx-php.svg?branch=master)](https://travis-ci.org/3d-pro/nginx-php)
 
 ## Required Docker Images
 - nginx
