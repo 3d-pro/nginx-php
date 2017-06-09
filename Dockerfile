@@ -8,7 +8,6 @@ RUN echo 'Acquire::http::Proxy "http://172.17.1.1:3142";' > /etc/apt/apt.conf.d/
     phpenmod mcrypt && \
     rm -rf /var/lib/apt/lists/* /etc/apt/apt.conf.d/11proxy
 
-#Copy settings
 COPY build-files/nginx.default /etc/nginx/sites-available/default
 COPY build-files/php-fpm-www.conf /etc/php/7.1/fpm/pool.d/www.conf
 COPY build-files/start.sh /start.sh
