@@ -1,7 +1,7 @@
 FROM 3dpro/nginx
 
 COPY build-files/ondrej-php.key /ondrej-php.key
-RUN echo 'Acquire::http::Proxy "http://172.17.1.1:3142";' > /etc/apt/apt.conf.d/11proxy && \
+RUN echo 'Acquire::http::Proxy "http://172.17.0.1:3142";' > /etc/apt/apt.conf.d/11proxy && \
     apt-key add /ondrej-php.key && \
     apt-get update && \
     apt-get -y upgrade && \ 
