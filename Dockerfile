@@ -2,7 +2,7 @@ FROM 3dpro/nginx
 
 COPY build-files/ondrej-php.key /ondrej-php.key
 RUN echo 'Acquire::http::Proxy "http://172.17.1.1:3142";' > /etc/apt/apt.conf.d/11proxy && \
-    apt-key add /build-files/ondrej-php.key && \
+    apt-key add /ondrej-php.key && \
     apt-get update && \
     apt-get -y upgrade && \ 
     apt-get -y install php7.1 php7.1-fpm php7.1-mbstring php7.1-xml php7.1-mysql php7.1-cli php7.1-curl php7.1-mcrypt php7.1-zip php7.1-gd && \
