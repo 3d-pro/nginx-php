@@ -8,6 +8,7 @@ RUN echo 'Acquire::http::Proxy "http://172.17.0.1:3142";' > /etc/apt/apt.conf.d/
     apt-get -y upgrade && \ 
     apt-get -y install php7.1 php7.1-fpm php7.1-mbstring php7.1-xml php7.1-mysql php7.1-cli php7.1-curl php7.1-mcrypt php7.1-zip php7.1-gd && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
+    composer global require hirak/prestissimo && \
     phpenmod mcrypt && \
     rm -rf /var/lib/apt/lists/* /etc/apt/apt.conf.d/11proxy /ondrej-php.key
 
