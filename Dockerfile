@@ -2,11 +2,13 @@ FROM 3dpro/nginx
 
 COPY build-files/ondrej-php.key /ondrej-php.key
 RUN apt-key add /ondrej-php.key && \
-    echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu devel main" > /etc/apt/sources.list.d/php.list && \
+    echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu bionic main" > /etc/apt/sources.list.d/php.list && \
     apt-get update && \
     apt-get -y upgrade && \ 
     apt-get -y install php7.1 php7.1-fpm php7.1-mbstring php7.1-xml php7.1-mysql php7.1-cli php7.1-curl php7.1-mcrypt php7.1-zip php7.1-gd && \
-    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
+    wget -O /usr/local/bin/composer https://getcomposer.org/download/1.7.2/composer.phar && \
+    chmod +x /usr/local/bin/composer
+    #curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     composer global require hirak/prestissimo && \
     phpenmod mcrypt && \
     rm -rf /var/lib/apt/lists/* /ondrej-php.key
