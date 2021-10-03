@@ -6,7 +6,6 @@ RUN apt-key add /ondrej-php.key && \
     apt-get update && \
     apt-get --no-install-recommends -y install php8.1 php8.1-fpm php8.1-mbstring php8.1-xml php8.1-mysql php8.1-cli php8.1-curl php8.1-zip php8.1-gd && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
-    composer global require hirak/prestissimo && \
     rm -rf /var/lib/apt/lists/* /ondrej-php.key
 
 COPY build-files/nginx.default /etc/nginx/sites-available/default
