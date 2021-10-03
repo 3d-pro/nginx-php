@@ -1,4 +1,4 @@
-# Nginx Mainline /w PHP 7.1 [![Build Status](https://travis-ci.org/3d-pro/nginx-php.svg?branch=master)](https://travis-ci.org/3d-pro/nginx-php)
+# Nginx Stable /w PHP 8.1 [![Build Status](https://github.com/3d-pro/nginx-php/actions/workflows/docker-build.yaml/badge.svg)](https://github.com/3d-pro/nginx-php/actions)
 
 ## Required Docker Images
 - nginx
