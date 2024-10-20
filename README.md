@@ -1,4 +1,4 @@
-# Nginx Stable /w PHP 8.1 [![Build Status](https://github.com/3d-pro/nginx-php/actions/workflows/docker-build.yaml/badge.svg)](https://github.com/3d-pro/nginx-php/actions)
+# Nginx Stable /w PHP 8.2 [![Build Status](https://github.com/3d-pro/nginx-php/actions/workflows/docker-build.yaml/badge.svg)](https://github.com/3d-pro/nginx-php/actions)
 
 ## Required Docker Images
 - nginx
